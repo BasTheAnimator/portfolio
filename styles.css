@@ -47,6 +47,16 @@ section {
     text-align: center;
 }
 
+/* Alternating Section Backgrounds */
+#welcome, #payment-times {
+    background-color: #333; /* Dark grey */
+}
+
+#contacts, #work, #availability {
+    background-color: #444; /* Slightly darker grey */
+}
+
+/* Headings */
 h1, h2 {
     color: #8bc34a; /* Green color for headings */
     margin-bottom: 20px;
@@ -58,11 +68,25 @@ p {
     margin-bottom: 30px;
 }
 
-/* Video and iframe Styles */
+/* Video Section: Horizontally displayed videos */
+#work ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#work ul li {
+    list-style-type: none;
+}
+
 video, iframe {
     max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+#work ul li:first-child iframe {
+    border: none; /* Remove border from the top video */
 }
 
 /* List Styles */
@@ -109,5 +133,10 @@ footer a:hover {
 
     h1, h2 {
         font-size: 24px;
+    }
+
+    /* Stack the videos vertically on smaller screens */
+    #work ul {
+        flex-direction: column;
     }
 }
