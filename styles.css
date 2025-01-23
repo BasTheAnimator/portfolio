@@ -129,3 +129,19 @@ footer {
     text-align: center;
     background-color: #333;
 }
+
+#availability ul {
+    list-style: none;
+    padding: 0;
+}
+
+#availability ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+#availability ul li strong {
+    font-weight: bold;
+    color: #0073e6; /* Optional color for the day */
+}
+
