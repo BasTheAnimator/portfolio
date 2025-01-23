@@ -8,14 +8,14 @@
 
 /* Background and Text */
 body {
-    background-color: #1a1a1a; /* Dark background */
+    background-color: #181818; /* Darker background */
     color: #e0e0e0; /* Light grey text */
     line-height: 1.6;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #333; /* Dark grey background */
+    background-color: #222; /* Dark background */
     padding: 10px;
 }
 
@@ -30,14 +30,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #8bc34a; /* Green color for links */
+    color: #4caf50; /* Muted green color for links */
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #cddc39; /* Lighter green on hover */
+    color: #80e27e; /* Light green on hover */
 }
 
 /* Section Styles */
@@ -48,17 +48,29 @@ section {
 }
 
 /* Alternating Section Backgrounds */
-#welcome, #payment-times {
-    background-color: #333; /* Dark grey */
+#welcome {
+    background-color: #181818; /* Darkest background */
 }
 
-#contacts, #work, #availability {
-    background-color: #444; /* Slightly darker grey */
+#contacts {
+    background-color: #222; /* Darker grey */
+}
+
+#work {
+    background-color: #1c1c1c; /* Even darker grey */
+}
+
+#availability {
+    background-color: #252525; /* Slightly lighter dark grey */
+}
+
+#payment-times {
+    background-color: #1f1f1f; /* Dark grey */
 }
 
 /* Headings */
 h1, h2 {
-    color: #8bc34a; /* Green color for headings */
+    color: #4caf50; /* Muted green color for headings */
     margin-bottom: 20px;
 }
 
@@ -82,7 +94,7 @@ p {
 video, iframe {
     max-width: 100%;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 #work ul li:first-child iframe {
@@ -104,20 +116,20 @@ ul li {
 
 /* Footer Styles */
 footer {
-    background-color: #333; /* Dark grey footer */
+    background-color: #222; /* Dark footer */
     padding: 20px;
     text-align: center;
     color: #e0e0e0;
 }
 
 footer a {
-    color: #8bc34a;
+    color: #4caf50;
     text-decoration: none;
     font-weight: bold;
 }
 
 footer a:hover {
-    color: #cddc39;
+    color: #80e27e;
 }
 
 /* Responsive Design */
