@@ -1,2 +1,2 @@
-# portfolio
-very cool made by metrosz on discord.
+# Portfolio for BasTheAnimator
+Portfolio made by discord user *metrosz*
