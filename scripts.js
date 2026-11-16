@@ -1,24 +1,38 @@
 /* ==========================================================================
-   BasTheAnimator — "THE VAULT" Interactive Scripts
+   BasTheAnimator — "THE VAULT" Interactive Scripts (Desktop + Mobile)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Nav & Scroll Spy
+    // 1. Mobile Nav Drawer & Scroll Spy
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navLinksContainer = document.getElementById('navLinks');
-    const navLinks = document.querySelectorAll('.vault-nav__link:not(.vault-nav__link--alt)');
+    const navLinks = document.querySelectorAll('.vault-nav__link');
+
+    function setMobileMenu(open) {
+        if (!mobileMenuBtn || !navLinksContainer) return;
+        navLinksContainer.classList.toggle('open', open);
+        mobileMenuBtn.classList.toggle('is-open', open);
+        mobileMenuBtn.setAttribute('aria-expanded', String(open));
+    }
 
     if (mobileMenuBtn && navLinksContainer) {
-        mobileMenuBtn.addEventListener('click', () => {
-            const open = navLinksContainer.classList.toggle('open');
-            mobileMenuBtn.setAttribute('aria-expanded', String(open));
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = !navLinksContainer.classList.contains('open');
+            setMobileMenu(isOpen);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (navLinksContainer.classList.contains('open') &&
+                !navLinksContainer.contains(e.target) &&
+                !mobileMenuBtn.contains(e.target)) {
+                setMobileMenu(false);
+            }
         });
     }
 
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navLinksContainer) navLinksContainer.classList.remove('open');
-        });
+        link.addEventListener('click', () => setMobileMenu(false));
     });
 
     const sectionIds = ['welcome', 'work', 'payment-times', 'availability', 'contacts'];
@@ -91,12 +105,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (soundToggleBtn) {
             soundToggleBtn.addEventListener('click', () => {
                 heroVideo.muted = !heroVideo.muted;
+                if (!heroVideo.muted && heroVideo.paused) {
+                    heroVideo.play().catch(() => {});
+                }
                 if (soundStatusDot) {
                     soundStatusDot.classList.toggle('is-unmuted', !heroVideo.muted);
                 }
                 if (soundBtnLabel) {
                     soundBtnLabel.textContent = heroVideo.muted
-                        ? 'Muted • Click for Audio'
+                        ? 'Muted • Tap for Audio'
                         : 'Audio Live • SFX On';
                 }
             });
@@ -215,7 +232,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
     if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
     document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') closeModal();
+        if (e.key === 'Escape') {
+            closeModal();
+            setMobileMenu(false);
+        }
     });
 
     if (openReelModalBtn) {
@@ -224,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modalCaption.textContent = '#0001 // SHOWREEL KEYFRAME INSPECTOR';
             modalTitle.textContent = 'Blue Lock: Two-Gun Direct Shot (frontpagevideo.mp4)';
             modalStage.innerHTML = `
-                <video id="modalVideo" controls autoplay loop playsinline style="width:100%;height:100%;object-fit:contain;">
+                <video id="modalVideo" controls autoplay loop playsinline webkit-playsinline style="width:100%;height:100%;object-fit:contain;">
                     <source src="frontpagevideo.mp4" type="video/mp4">
                 </video>
             `;
@@ -264,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const ytId = btn.getAttribute('data-yt');
             const title = btn.getAttribute('data-title');
             if (!vaultModal || !modalStage) return;
-            modalCaption.textContent = `THEATER VIEW // YOUTUBE`;
+            modalCaption.textContent = 'THEATER VIEW // YOUTUBE';
             modalTitle.textContent = title || 'Animation Showcase';
             modalStage.innerHTML = `
                 <iframe
