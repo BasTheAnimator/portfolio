@@ -3,88 +3,527 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BasTheAnimator Portfolio</title>
+    <title>BasTheAnimator / THE VAULT — Roblox Animation Portfolio</title>
+    <meta name="description" content="Hello, I'm BasTheAnimator, a passionate Roblox animator. Explore my animation vault, Robux commission rates, availability, and contact info.">
+    <!-- Google Fonts: Silkscreen (8-bit Pixel Display), DM Sans (Clean UI Body), JetBrains Mono (Archive IDs) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#welcome">Welcome</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#payment-times">Payment/Times</a></li>
-            <li><a href="#availability">Availability</a></li>
-        </ul>
-    </nav>
+    <!-- Top Header Bar (Ohnyfans / Vault Style) -->
+    <header class="vault-header" id="top">
+        <div class="vault-header__inner">
+            <!-- Left: Pixel Avatar + Wordmark -->
+            <a href="#welcome" class="vault-brand">
+                <span class="vault-brand__avatar" aria-hidden="true">
+                    <span class="avatar-pixel-icon">B</span>
+                </span>
+                <span class="vault-brand__wordmark">BASTHEANIMATOR</span>
+            </a>
 
-    <!-- Welcome Section -->
-    <section id="welcome">
-        <h1>My Portfolio</h1>
-        <p>Hello, I'm BasTheAnimator, a passionate animator. Explore my work and get in touch!</p>
-        <video controls autoplay muted loop width="80%" height="315">
-            <source src="frontpagevideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
+            <!-- Center: Clean Horizontal Nav Links -->
+            <nav class="vault-nav" aria-label="Primary Navigation">
+                <ul class="vault-nav__list" id="navLinks">
+                    <li><a href="#welcome" class="vault-nav__link">Welcome</a></li>
+                    <li><a href="#work" class="vault-nav__link is-active">Vault</a></li>
+                    <li><a href="#payment-times" class="vault-nav__link">Payment/Times</a></li>
+                    <li><a href="#availability" class="vault-nav__link">Availability</a></li>
+                    <li><a href="#contacts" class="vault-nav__link">Contacts</a></li>
+                    <li><a href="studio.html" class="vault-nav__link vault-nav__link--alt" title="Switch to saved Dark Studio design">Studio v1 &nearr;</a></li>
+                </ul>
+            </nav>
 
-    <!-- Contacts Section -->
-    <section id="contacts">
-        <h2>Contact Information</h2>
-        <ul>
-            <li>Email: <a href="mailto:shybxii@outlook.com">shybxii@outlook.com</a></li>
-            <li>Discord: basmatirice_</li>
-        </ul>
-    </section>
+            <!-- Right: Live Schedule Status Pill -->
+            <div class="vault-header__right">
+                <a href="#availability" class="live-pill" id="headerStatusPill" title="View weekly availability schedule">
+                    <span class="live-pill__dot" id="headerStatusDot"></span>
+                    <span class="live-pill__text" id="headerStatusText">Commissions Open</span>
+                </a>
+                <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-    <!-- Work Section -->
-    <section id="work">
-        <h2>My Work</h2>
-        <ul>
-            <li>
-                <iframe width="300" height="169" src="https://www.youtube.com/embed/pqVkKJZVR_M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>Nagi Seishiro Timelapse - 43 Minutes</p>
-            </li>
-            <li>
-                <iframe width="300" height="169" src="https://www.youtube.com/embed/pGXO24V7-wM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>Dragon Drive Animation - 6 hours</p>
-            </li>
-            <li>
-                <iframe width="300" height="169" src="https://www.youtube.com/embed/mKWIWSO8eNU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>Beast Gohan Animation - 8 Hours</p>
-            </li>
-        </ul>
-    </section>
+    <main class="vault-main">
+        <!-- Welcome & Vault Hero Section -->
+        <section id="welcome" class="vault-hero">
+            <div class="vault-container">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="#top">Home</a>
+                    <span class="breadcrumb__sep">/</span>
+                    <a href="#welcome">BasTheAnimator</a>
+                    <span class="breadcrumb__sep">/</span>
+                    <span class="breadcrumb__current">Vault</span>
+                </nav>
 
-    <!-- Availability Section -->
-    <section id="availability">
-        <h2>My Availability</h2>
-        <ul>
-            <li><strong>Monday to Thursday:</strong> 5 PM - 9 PM</li>
-            <li><strong>Friday:</strong> 5 PM - 11 PM</li>
-            <li><strong>Saturday:</strong> 11 AM - 11 PM</li>
-            <li><strong>Sunday:</strong> 9 AM - 9 PM</li>
-        </ul>
-    </section>
+                <!-- Giant Pixel Title -->
+                <div class="section-head">
+                    <h1 class="section-head__title">THE VAULT</h1>
+                    <p class="section-head__subtitle">
+                        Hello, I'm <strong>BasTheAnimator</strong>, a passionate Roblox animator. Explore my work and get in touch — 4 featured animations, combat reels &amp; timelapses, and counting.
+                    </p>
+                </div>
 
-    <!-- Payment and Times Section -->
-    <section id="payment">
-        <h2>Payment and Cost</h2>
-        <ul>
-            <li>Cost: 1000 Robux for simple animations.</li>
-            <li>2000 - 3000 Robux for complex animations.</li>
-            <li>5000 Robux for cinematic animations*</li>
-            <li>Payment Methods: Robux</li>
-            <li>*DM for questions</li>
-        </ul>
-    </section>
+                <!-- Desk Controls Bar: Filter Prints + Scatter Toggle -->
+                <div class="vault-toolbar">
+                    <div class="vault-filters" role="tablist" aria-label="Filter Vault Prints">
+                        <button type="button" class="vault-filter is-active" data-filter="all">All Prints (4)</button>
+                        <button type="button" class="vault-filter" data-filter="reel">Showreel</button>
+                        <button type="button" class="vault-filter" data-filter="cinematic">Cinematic (8h)</button>
+                        <button type="button" class="vault-filter" data-filter="combat">Combat (6h)</button>
+                        <button type="button" class="vault-filter" data-filter="timelapse">Timelapse (43m)</button>
+                    </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 metrosz. All rights reserved. Created for BasTheAnimator.</p>
+                    <div class="vault-desk-actions">
+                        <button type="button" class="keycap-pill" id="toggleScatterBtn" title="Toggle polaroid tilt scatter">
+                            <span class="keycap-pill__key">R</span>
+                            <span id="scatterBtnLabel">Align Grid</span>
+                        </button>
+                        <button type="button" class="keycap-pill" data-copy="basmatirice_" title="Copy Discord username">
+                            <span class="keycap-pill__key">D</span>
+                            <span>Discord: basmatirice_</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section: Polaroid Masonry Prints Grid -->
+        <section id="work" class="vault-work-section">
+            <div class="vault-container">
+                <div class="vault-index__grid" id="vaultGrid">
+
+                    <!-- Print #0001: Featured Showreel (frontpagevideo.mp4) -->
+                    <div class="vault-index__item" data-category="reel cinematic">
+                        <article class="print print--featured" style="--tilt: -1.6deg;">
+                            <!-- Yellow Torn Tape Sticker -->
+                            <div class="tape-sticker" aria-hidden="true">FEATURED REEL</div>
+
+                            <div class="print__frame print__frame--video">
+                                <video id="heroVideo" class="print__video" autoplay muted loop playsinline preload="auto">
+                                    <source src="frontpagevideo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="print__overlay-controls">
+                                    <button type="button" class="print-chip" id="soundToggleBtn">
+                                        <span id="soundStatusDot" class="chip-dot"></span>
+                                        <span id="soundBtnLabel">Muted &bull; Click for Audio</span>
+                                    </button>
+                                    <button type="button" class="print-chip" id="openReelModalBtn">
+                                        <span>Inspect Keyframes &nearr;</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="print__chin">
+                                <div class="print__meta-row">
+                                    <span class="print__caption">#0001</span>
+                                    <span class="print__tag">FRONT PAGE VIDEO &bull; 60 FPS</span>
+                                </div>
+                                <h2 class="print__title">Blue Lock: Two-Gun Direct Shot</h2>
+                                <p class="print__desc">Isagi Yoichi puzzle awakening, dual-pistol impact frames &amp; goal sequence.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Print #0002: Nagi Seishiro Timelapse - 43 Minutes -->
+                    <div class="vault-index__item" data-category="timelapse">
+                        <article class="print" style="--tilt: 1.45deg;">
+                            <div class="print__frame print__frame--embed">
+                                <iframe
+                                    src="https://www.youtube.com/embed/pqVkKJZVR_M"
+                                    title="Nagi Seishiro Timelapse - 43 Minutes"
+                                    loading="lazy"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <div class="print__chin">
+                                <div class="print__meta-row">
+                                    <span class="print__caption">#0002</span>
+                                    <span class="print__tag">43 MINUTES &bull; TIMELAPSE</span>
+                                </div>
+                                <h2 class="print__title">Nagi Seishiro Timelapse - 43 Minutes</h2>
+                                <p class="print__desc">Full keyframe workflow, posing, and timing breakdown from start to finish.</p>
+                                <div class="print__links">
+                                    <button type="button" class="print__link-btn" data-yt="pqVkKJZVR_M" data-title="Nagi Seishiro Timelapse - 43 Minutes">Theater Mode</button>
+                                    <a href="https://www.youtube.com/watch?v=pqVkKJZVR_M" target="_blank" rel="noopener noreferrer" class="print__ext-link">YouTube &nearr;</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Print #0003: Dragon Drive Animation - 6 hours -->
+                    <div class="vault-index__item" data-category="combat">
+                        <article class="print" style="--tilt: -1.15deg;">
+                            <div class="print__frame print__frame--embed">
+                                <iframe
+                                    src="https://www.youtube.com/embed/pGXO24V7-wM"
+                                    title="Dragon Drive Animation - 6 hours"
+                                    loading="lazy"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <div class="print__chin">
+                                <div class="print__meta-row">
+                                    <span class="print__caption">#0003</span>
+                                    <span class="print__tag">6 HOURS &bull; COMBAT</span>
+                                </div>
+                                <h2 class="print__title">Dragon Drive Animation - 6 hours</h2>
+                                <p class="print__desc">6-hour production focusing on kinetic strike weight, footwork, and velocity.</p>
+                                <div class="print__links">
+                                    <button type="button" class="print__link-btn" data-yt="pGXO24V7-wM" data-title="Dragon Drive Animation - 6 hours">Theater Mode</button>
+                                    <a href="https://www.youtube.com/watch?v=pGXO24V7-wM" target="_blank" rel="noopener noreferrer" class="print__ext-link">YouTube &nearr;</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Print #0004: Beast Gohan Animation - 8 Hours -->
+                    <div class="vault-index__item" data-category="cinematic combat">
+                        <article class="print" style="--tilt: 1.75deg;">
+                            <div class="tape-sticker tape-sticker--red" aria-hidden="true">8 HR BUILD</div>
+
+                            <div class="print__frame print__frame--embed">
+                                <iframe
+                                    src="https://www.youtube.com/embed/mKWIWSO8eNU"
+                                    title="Beast Gohan Animation - 8 Hours"
+                                    loading="lazy"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <div class="print__chin">
+                                <div class="print__meta-row">
+                                    <span class="print__caption">#0004</span>
+                                    <span class="print__tag">8 HOURS &bull; CINEMATIC</span>
+                                </div>
+                                <h2 class="print__title">Beast Gohan Animation - 8 Hours</h2>
+                                <p class="print__desc">8-hour cinematic transformation and finisher sequence with dynamic camera work.</p>
+                                <div class="print__links">
+                                    <button type="button" class="print__link-btn" data-yt="mKWIWSO8eNU" data-title="Beast Gohan Animation - 8 Hours">Theater Mode</button>
+                                    <a href="https://www.youtube.com/watch?v=mKWIWSO8eNU" target="_blank" rel="noopener noreferrer" class="print__ext-link">YouTube &nearr;</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment and Cost Section (#payment & #payment-times) -->
+        <section id="payment-times" class="vault-section">
+            <div id="payment" class="anchor-alias"></div>
+            <div class="vault-container">
+                <div class="section-divider">
+                    <span class="section-divider__code">SECTION // 02</span>
+                    <span class="section-divider__line"></span>
+                    <span class="section-divider__meta">PAYMENT METHODS: ROBUX</span>
+                </div>
+
+                <div class="section-head section-head--compact">
+                    <h2 class="section-head__title section-head__title--md">PAYMENT &amp; COST</h2>
+                    <p class="section-head__subtitle">
+                        Payment Methods: <strong>Robux</strong> &bull; <em>*DM for questions</em>. Click any Polaroid tier below to copy a commission brief for Discord (<code>basmatirice_</code>).
+                    </p>
+                </div>
+
+                <!-- 3 Polaroid Rate Cards -->
+                <div class="polaroid-row polaroid-row--3">
+                    <!-- Tier 1: 1000 Robux -->
+                    <article class="print print--rate" style="--tilt: -1.2deg;" data-select-tier="Simple Animation (1000 Robux)">
+                        <div class="print__paper-body">
+                            <div class="rate-header">
+                                <span class="rate-badge">TIER 01 // SIMPLE</span>
+                                <span class="rate-currency">R$</span>
+                            </div>
+                            <div class="rate-price">1000 <span>Robux</span></div>
+                            <p class="rate-exact">Cost: 1000 Robux for simple animations.</p>
+                            <ul class="rate-list">
+                                <li>Basic swings, idles, or movement loops</li>
+                                <li>Single-character emotes &amp; poses</li>
+                                <li>Payment Methods: Robux</li>
+                            </ul>
+                        </div>
+                        <div class="print__chin">
+                            <div class="print__meta-row">
+                                <span class="print__caption">#RATE-01</span>
+                                <span class="print__action-hint">Click to Copy DM &rarr;</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tier 2: 2000 - 3000 Robux -->
+                    <article class="print print--rate print--featured" style="--tilt: 0.9deg;" data-select-tier="Complex Animation (2000 - 3000 Robux)">
+                        <div class="tape-sticker" aria-hidden="true">MOST POPULAR</div>
+                        <div class="print__paper-body">
+                            <div class="rate-header">
+                                <span class="rate-badge">TIER 02 // COMPLEX</span>
+                                <span class="rate-currency">R$</span>
+                            </div>
+                            <div class="rate-price">2000 - 3000 <span>Robux</span></div>
+                            <p class="rate-exact">2000 - 3000 Robux for complex animations.</p>
+                            <ul class="rate-list">
+                                <li>Multi-hit combat combos &amp; heavy skills</li>
+                                <li>High-speed momentum (e.g. Dragon Drive)</li>
+                                <li>Payment Methods: Robux</li>
+                            </ul>
+                        </div>
+                        <div class="print__chin">
+                            <div class="print__meta-row">
+                                <span class="print__caption">#RATE-02</span>
+                                <span class="print__action-hint">Click to Copy DM &rarr;</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tier 3: 5000 Robux* -->
+                    <article class="print print--rate" style="--tilt: -1.4deg;" data-select-tier="Cinematic Animation (5000 Robux*)">
+                        <div class="tape-sticker tape-sticker--red" aria-hidden="true">*DM FOR QUESTIONS</div>
+                        <div class="print__paper-body">
+                            <div class="rate-header">
+                                <span class="rate-badge">TIER 03 // CINEMATIC</span>
+                                <span class="rate-currency">R$</span>
+                            </div>
+                            <div class="rate-price">5000 <span>Robux*</span></div>
+                            <p class="rate-exact">5000 Robux for cinematic animations*</p>
+                            <ul class="rate-list">
+                                <li>Full anime cutscenes (Beast Gohan / Blue Lock)</li>
+                                <li>Custom camera work &amp; impact staging</li>
+                                <li>Payment Methods: Robux &bull; <strong>*DM for questions</strong></li>
+                            </ul>
+                        </div>
+                        <div class="print__chin">
+                            <div class="print__meta-row">
+                                <span class="print__caption">#RATE-03</span>
+                                <span class="print__action-hint">Click to Copy DM &rarr;</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Availability Section (#availability) -->
+        <section id="availability" class="vault-section">
+            <div class="vault-container">
+                <div class="section-divider">
+                    <span class="section-divider__code">SECTION // 03</span>
+                    <span class="section-divider__line"></span>
+                    <span class="section-divider__meta" id="todayScheduleBanner">CHECKING SCHEDULE...</span>
+                </div>
+
+                <div class="section-head section-head--compact">
+                    <h2 class="section-head__title section-head__title--md">MY AVAILABILITY</h2>
+                    <p class="section-head__subtitle">
+                        Weekly studio and communication hours. Today's active window is automatically highlighted below.
+                    </p>
+                </div>
+
+                <div class="polaroid-row polaroid-row--4">
+                    <!-- Monday to Thursday -->
+                    <article class="print print--schedule" style="--tilt: -1.1deg;" data-days="1,2,3,4">
+                        <div class="tape-sticker tape-sticker--red today-sticker hidden">TODAY</div>
+                        <div class="print__paper-body">
+                            <span class="sched-tag">WEEKDAYS</span>
+                            <h3 class="sched-day">Monday to Thursday</h3>
+                            <p class="sched-time">5 PM - 9 PM</p>
+                            <div class="sched-meter"><span style="left:70.8%;width:16.7%"></span></div>
+                        </div>
+                        <div class="print__chin">
+                            <div class="print__meta-row">
+                                <span class="print__caption">#SCHED-01</span>
+                                <span class="print__tag">4 HRS / DAY</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Friday -->
+                    <article class="print print--schedule" style="--tilt: 1.3deg;" data-days="5">
+                        <div class="tape-sticker tape-sticker--red today-sticker hidden">TODAY</div>
+                        <div class="print__paper-body">
+                            <span class="sched-tag">FRIDAY NIGHT</span>
+                            <h3 class="sched-day">Friday</h3>
+                            <p class="sched-time">5 PM - 11 PM</p>
+                            <div class="sched-meter"><span style="left:70.8%;width:25%"></span></div>
+                        </div>
+                        <div class="print__chin">
+                            <div class="print__meta-row">
+                                <span class="print__caption">#SCHED-02</span>
+                                <span class="print__tag">6 HRS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Saturday -->
+                    <article class="print print--schedule" style="--tilt: -0.9deg;" data-days="6">
+                        <div class="tape-sticker tape-sticker--red today-sticker hidden">TODAY</div>
+                        <div class="print__paper-body">
+                            <span class="sched-tag">WEEKEND</span>
+                            <h3 class="sched-day">Saturday</h3>
+                            <p class="sched-time">11 AM - 11 PM</p>
+                            <div class="sched-meter"><span style="left:45.8%;width:50%"></span></div>
+                        </div>
+                        <div class="print__chin">
+                            <div class="print__meta-row">
+                                <span class="print__caption">#SCHED-03</span>
+                                <span class="print__tag">12 HRS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sunday -->
+                    <article class="print print--schedule" style="--tilt: 1.5deg;" data-days="0">
+                        <div class="tape-sticker tape-sticker--red today-sticker hidden">TODAY</div>
+                        <div class="print__paper-body">
+                            <span class="sched-tag">WEEKEND</span>
+                            <h3 class="sched-day">Sunday</h3>
+                            <p class="sched-time">9 AM - 9 PM</p>
+                            <div class="sched-meter"><span style="left:37.5%;width:50%"></span></div>
+                        </div>
+                        <div class="print__chin">
+                            <div class="print__meta-row">
+                                <span class="print__caption">#SCHED-04</span>
+                                <span class="print__tag">12 HRS</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacts Section (#contacts) -->
+        <section id="contacts" class="vault-section vault-section--last">
+            <div class="vault-container">
+                <div class="section-divider">
+                    <span class="section-divider__code">SECTION // 04</span>
+                    <span class="section-divider__line"></span>
+                    <span class="section-divider__meta">DIRECT CONTACT</span>
+                </div>
+
+                <div class="section-head section-head--compact">
+                    <h2 class="section-head__title section-head__title--md">CONTACT INFORMATION</h2>
+                    <p class="section-head__subtitle">
+                        Reach out via Discord or Email to book a commission slot or ask questions about custom animations.
+                    </p>
+                </div>
+
+                <div class="polaroid-row polaroid-row--2">
+                    <!-- Discord Contact Print -->
+                    <article class="print print--contact" style="--tilt: -1.1deg;">
+                        <div class="tape-sticker" aria-hidden="true">FASTEST REPLY</div>
+                        <div class="print__paper-body contact-paper">
+                            <span class="rate-badge">DISCORD USERNAME</span>
+                            <h3 class="contact-value">basmatirice_</h3>
+                            <p class="contact-sub">Add or DM on Discord for Robux commission slots and questions.</p>
+                            <div class="contact-actions">
+                                <button type="button" class="keycap-btn" data-copy="basmatirice_">
+                                    <span>Copy Discord: basmatirice_</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="print__chin">
+                            <div class="print__meta-row">
+                                <span class="print__caption">#CONTACT-01</span>
+                                <span class="print__tag">DISCORD: basmatirice_</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Email Contact Print -->
+                    <article class="print print--contact" style="--tilt: 1.25deg;">
+                        <div class="print__paper-body contact-paper">
+                            <span class="rate-badge">DIRECT EMAIL</span>
+                            <h3 class="contact-value">
+                                <a href="mailto:shybxii@outlook.com">shybxii@outlook.com</a>
+                            </h3>
+                            <p class="contact-sub">Send detailed animation references, scripts, or project inquiries.</p>
+                            <div class="contact-actions">
+                                <a href="mailto:shybxii@outlook.com" class="keycap-btn keycap-btn--red">
+                                    <span>Send Email &nearr;</span>
+                                </a>
+                                <button type="button" class="keycap-btn" data-copy="shybxii@outlook.com">
+                                    <span>Copy Email</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="print__chin">
+                            <div class="print__meta-row">
+                                <span class="print__caption">#CONTACT-02</span>
+                                <span class="print__tag">EMAIL: shybxii@outlook.com</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8-Bit Pixel Dither Dissolve Boundary (Signature Ohnyfans Effect) -->
+    <div class="dither-transition" aria-hidden="true">
+        <div class="dither-row dither-row--1"></div>
+        <div class="dither-row dither-row--2"></div>
+        <div class="dither-row dither-row--3"></div>
+        <div class="dither-row dither-row--4"></div>
+    </div>
+
+    <!-- Dark Charcoal Footer (#121314) -->
+    <footer class="vault-footer">
+        <div class="vault-container vault-footer__inner">
+            <div class="vault-footer__left">
+                <span class="vault-footer__logo">BASTHEANIMATOR // VAULT</span>
+                <p class="vault-footer__copy">© 2025 metrosz. All rights reserved. Created for BasTheAnimator.</p>
+            </div>
+            <div class="vault-footer__links">
+                <a href="#welcome">Welcome</a>
+                <a href="#work">Work</a>
+                <a href="#payment-times">Payment</a>
+                <a href="#availability">Availability</a>
+                <a href="#contacts">Contacts</a>
+                <a href="studio.html">Studio Dark (v1)</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Link to JavaScript -->
+    <!-- Mechanical Keyboard Keycap Back-To-Top Button -->
+    <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+        ↑
+    </button>
+
+    <!-- Lightbox / Polaroid Inspector Modal -->
+    <div class="vault-modal hidden" id="vaultModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="vault-modal__backdrop" id="modalBackdrop"></div>
+        <div class="vault-modal__polaroid">
+            <div class="vault-modal__top">
+                <span class="vault-modal__id" id="modalCaption">#0001 // INSPECTOR</span>
+                <button type="button" class="keycap-close" id="closeModalBtn" aria-label="Close modal">ESC</button>
+            </div>
+            <div class="vault-modal__stage" id="modalStage">
+                <!-- Populated dynamically with video + frame controls or YouTube embed -->
+            </div>
+            <div class="vault-modal__chin">
+                <h3 id="modalTitle">Blue Lock: Two-Gun Direct Shot</h3>
+                <div class="vault-modal__controls" id="modalExtraControls"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tactile Toast Notification -->
+    <div class="vault-toast" id="copyToast" role="status" aria-live="polite">
+        <span class="vault-toast__tape">COPIED</span>
+        <span id="toastMessage">Copied to clipboard!</span>
+    </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
